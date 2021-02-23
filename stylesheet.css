@@ -33,17 +33,35 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 480px) {
+@media all and (max-width: 500px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        background-color: rgb(50, 148, 205);
+    }
+    article {
+        min-height: 50vw;
+    }
+}
 
+@media all and (min-width: 501px) and (max-width: 1025px) {
     main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
         background-color: yellowgreen;
-        grid-column-gap: 6px;
-        grid-row-gap:6px;
     }
-
     article {
-        min-height: 20vw;
+        min-height: 25vw;
+    }
+}
+
+@media all and (min-width: 1026px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        background-color: rgb(205, 182, 50);
+    }
+    article {
+        min-height: 12.5vw;
     }
 }
