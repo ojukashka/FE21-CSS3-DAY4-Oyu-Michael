@@ -14,7 +14,7 @@ body {
 
 .container {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
 }
@@ -33,12 +33,17 @@ a {
     text-decoration: none;
 }
 
-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color: yellowgreen;
-}
+@media screen and (max-width: 480px) {
 
-article {
-    flex: 1 1 50%;
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        background-color: yellowgreen;
+        grid-column-gap: 6px;
+        grid-row-gap:6px;
+    }
+
+    article {
+        min-height: 20vw;
+    }
 }
