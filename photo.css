@@ -1,0 +1,95 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Nunito", Georgia;
+    color: whitesmoke;
+    font-size: 180%;
+    font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
+    background-color: #e5e5e5;
+}
+
+.container {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.gallery {
+display: grid;
+   grid-template-columns: repeat (8, 1fr);
+   grid-template-rows: repeat (8, 5vw);
+}
+
+.gallery_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery_item-1 {
+grid-column-start: 1;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+.gallery_item-2 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    }
+
+.gallery_item-3 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    }
+
+.gallery_item-4 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 6;
+     }
+
+.gallery_item-5 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 9;
+    }
+
+
+.gallery_item-6 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 6;
+    grid-row-end: 9;
+     }
+
+@media screen and (max-width: 480px) {
+    body {
+        background-color: #8e9aaf;
+    }
+}
+
+@media screen and (min-width: 481px) 
+and (max-width: 1200px) {
+    body {
+        background-color: #adb5bd;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    body {
+        background-color: #9a8c98;
+    }
+}
+
