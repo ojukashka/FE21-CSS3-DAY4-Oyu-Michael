@@ -1,0 +1,1 @@
+Remote repository of Oyu and Michael for Day 2 of week 2, FullStack course
