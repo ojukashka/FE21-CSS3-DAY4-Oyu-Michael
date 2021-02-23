@@ -1,57 +1,107 @@
 * {
-    border: 0.5px solid;
     margin: 0;
     padding: 0;
 }
+
 
 body {
     display: flex;
     width: 100vw;
     height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1026px;
+    font-family: 'Inconsolata', monospace;
     font-size: 100%;
+    color: white;
+    background-color: rgb(82, 124, 240);
+    box-sizing: border-box;
+    margin: auto;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+    align-content: center;
     width: 100vw;
     height: 100vh;
+}
+
+#logo {
+    text-align: center;
+    font-size: 250%;
+    font-weight: bolder;
+    height: 60px;
+    padding-top: 30px;
+}
+
+nav {
+    height: 50px;
 }
 
 nav ul {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    height: 100%;
+    align-content: space-between;
 }
 
 li {
-    flex-flow: row wrap;
+    flex: 1 1 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
     text-decoration: none;
+    color: white;
+    font-size: 120%;
+    border-style: dashed;
+    border-width: 0.5px;
+    padding: 10px;
+}
+
+.image1 img {
+    width: 90%;
+    padding-top: 10px;
+}
+
+.image2 img {
+    width: 90%;
+    padding-top: 10px;
 }
 
 @media all and (max-width: 500px) {
     main {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        background-color: rgb(50, 148, 205);
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        text-align: center;
     }
+
     article {
-        min-height: 50vw;
+        overflow: hidden;
+        text-align: center;
     }
 }
 
-@media all and (min-width: 501px) and (max-width: 1025px) {
+@media all and (min-width: 501px) and (max-width: 750px) {
     main {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        background-color: yellowgreen;
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        text-align: center;
     }
     article {
-        min-height: 25vw;
+        text-align: center;
+    }
+}
+
+@media all and (min-width: 751px) and (max-width: 1025px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+        text-align: center;
+    }
+    article {
+        text-align: center;
     }
 }
 
@@ -59,9 +109,10 @@ a {
     main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        background-color: rgb(205, 182, 50);
+        text-align: center;
     }
+
     article {
-        min-height: 12.5vw;
+        text-align: center;
     }
 }
